@@ -2,13 +2,13 @@
     "每日任务之捕食战": {
         "post_delay": 1000,
         "roi": [
-            1021,
-            174,
-            215,
-            183
+            1047,
+            154,
+            190,
+            198
         ],
-        "recognition": "OCR",
-        "expected": "任",
+        "recognition": "TemplateMatch",
+        "template": "日常-捕食战\\进入任务.png",
         "action": "Click",
         "next": [
             "成长"
@@ -69,6 +69,7 @@
         "post_delay": 2000,
         "next": "捕食机会尽了",
         "interrupt": [
+            "黑屏计数",
             "捕食战专属战斗"
         ]
     },
@@ -83,14 +84,18 @@
         "expected": "出擊",
         "action": "Click",
         "post_delay": 5000,
-        "next": "捕食战斗ing",
-        "interrupt": []
+        "next": "捕食战战斗是否结束检测",
+        "interrupt": [
+            "黑屏计数",
+            "捕食战斗ing"
+        ]
     },
     "捕食战战斗是否结束检测": {
         "next": [
             "捕食战评分界面"
         ],
         "interrupt": [
+            "切换为自动战斗",
             "捕食战斗ing"
         ]
     },

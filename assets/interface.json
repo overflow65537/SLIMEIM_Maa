@@ -17,14 +17,14 @@
         {
             "name": "官服",
             "path": [
-                "{PROJECT_DIR}/assete/resource"
+                "{PROJECT_DIR}/resource/"
             ]
         },
         {
             "name": "B 服",
             "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
+                "{PROJECT_DIR}/resource/",
+                "{PROJECT_DIR}/resource/bilibili"
             ]
         }
     ],
@@ -62,32 +62,5 @@
             "name": "日常-锻造场升级装备",
             "entry": "锻造场升级任务"
         }
-    ],
-    "option": {
-        "捕食类型": {
-            "cases": [
-                {
-                    "name": "选择捕食类型",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": [
-                                "轉魂強化任務",
-                                "心體強化任務",
-                                "堅守強化任務",
-                                "猛攻強化任務"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    ]
 }

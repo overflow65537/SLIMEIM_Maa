@@ -10,6 +10,12 @@
         "action": "Click",
         "next": "结束任务"
     },
+    "识别是否已开启菜单": {
+        "recognition": "OCR",
+        "expected": "關閉",
+        "action": "DoNothing",
+        "next": "结束任务"
+    },
     "黑屏计数": {
         "_doc": "------------------------------------------------------------------------黑屏检测",
         "recognition": "ColorMatch",
