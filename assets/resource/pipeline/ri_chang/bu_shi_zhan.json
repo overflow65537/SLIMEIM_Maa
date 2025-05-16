@@ -28,7 +28,8 @@
         "recognition": "OCR",
         "expected": "成長",
         "action": "Click",
-        "next": "检测是否可以捕食"
+        "next": "检测是否可以捕食",
+        "interrupt": "成长"
     },
     "检测是否可以捕食": {
         "next": [
@@ -49,7 +50,8 @@
         "action": "Click",
         "next": [
             "选择捕食类型"
-        ]
+        ],
+        "interrupt": "点击捕食战"
     },
     "选择捕食类型": {
         "roi": [
@@ -148,10 +150,11 @@
         "expected": "下一步",
         "post_delay": 500,
         "action": "Click",
-        "next": "选择捕食类型",
+        "next": "检测是否可以捕食",
         "interrupt": [
             "黑屏计数",
-            "捕食战_再次下一步"
+            "捕食战_再次下一步",
+            "选择捕食类型"
         ]
     },
     "捕食战_再次战斗": {

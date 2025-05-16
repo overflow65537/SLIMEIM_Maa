@@ -11,6 +11,7 @@
             "开始游戏2",
             "正在确认更新内容",
             "有可更新资料",
+            "预期外错误的OK",
             "黑屏计数",
             "skip",
             "仓库满了",
@@ -56,12 +57,6 @@
         "expected": "紫苑",
         "next": "OK",
         "interrupt": "仓库满了"
-    },
-    "OK": {
-        "recognition": "OCR",
-        "expected": "OK",
-        "action": "Click",
-        "post_delay": 10000
     },
     "点击選單": {
         "post_delay": 5000,

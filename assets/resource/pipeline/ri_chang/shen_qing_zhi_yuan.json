@@ -13,6 +13,7 @@
         "next": "点击右下角兴建",
         "interrupt": [
             "黑屏计数",
+            "发生预期外的错误_400",
             "OK"
         ]
     },
@@ -42,7 +43,9 @@
         "action": "Click",
         "post_delay": 1000,
         "next": "建筑状态检测",
-        "interrupt": []
+        "interrupt": [
+            "点击右下角兴建"
+        ]
     },
     "建筑状态检测": {
         "roi": [
@@ -62,20 +65,36 @@
     },
     "支援请求": {
         "roi": [
-            1051,
-            176,
-            515,
-            520
+            496,
+            408,
+            716,
+            271
         ],
         "recognition": "OCR",
         "expected": "支援請求",
-        "post_delay": 2000,
         "action": "Click",
         "next": "一并选择",
         "interrupt": [
+            "检测是否已经支援过了",
             "OK",
-            "叉叉"
+            "叉叉",
+            "支援请求"
         ]
+    },
+    "检测是否已经支援过了": {
+        "roi": [
+            87,
+            310,
+            1100,
+            89
+        ],
+        "recognition": "OCR",
+        "expected": "已達當日上限",
+        "post_delay": 1000,
+        "next": [
+            "识别是否已开启菜单"
+        ],
+        "interrupt": "返回菜单"
     },
     "一并选择": {
         "roi": [
@@ -133,7 +152,10 @@
         "expected": "沒有興建中的設施",
         "action": "DoNothing",
         "post_delay": 1000,
-        "next": "点击建筑的提升"
+        "next": "点击建筑的提升",
+        "interrupt": [
+            "啥也没有"
+        ]
     },
     "点击建筑的提升": {
         "roi": [
@@ -145,8 +167,11 @@
         "recognition": "OCR",
         "expected": "提升",
         "action": "Click",
+        "next": "识别是否准备升级建筑",
         "post_delay": 1000,
-        "next": "添加设施至列表"
+        "interrupt": [
+            "添加设施至列表"
+        ]
     },
     "添加设施至列表": {
         "roi": [
@@ -173,7 +198,26 @@
         "action": "Click",
         "post_delay": 3000,
         "next": "设施列表满了",
-        "interrupt": "添加设施至列表"
+        "interrupt": [
+            "添加设施至列表",
+            "识别是否准备升级建筑"
+        ]
+    },
+    "识别是否准备升级建筑": {
+        "roi": [
+            48,
+            451,
+            700,
+            206
+        ],
+        "recognition": "OCR",
+        "expected": "所需素材",
+        "post_delay": 1000,
+        "next": "设施列表满了",
+        "interrupt": [
+            "添加设施至列表",
+            "设施即将升级界面"
+        ]
     },
     "设施列表满了": {
         "roi": [
@@ -204,7 +248,24 @@
         "post_delay": 1000,
         "next": "支援请求",
         "interrupt": [
+            "保管中的设施提升完毕",
             "点击右下角兴建"
+        ]
+    },
+    "保管中的设施提升完毕": {
+        "roi": [
+            441,
+            58,
+            405,
+            81
+        ],
+        "recognition": "OCR",
+        "expected": "提升完畢",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": "点击右下角兴建",
+        "interrupt": [
+            "OK"
         ]
     }
 }

@@ -58,5 +58,25 @@
         "recognition": "OCR",
         "expected": ".",
         "action": "Click"
+    },
+    "发生预期外的错误_400": {
+        "recognition": "OCR",
+        "expected": "發生預期外的錯誤",
+        "action": "Click",
+        "next": "预期外错误的OK"
+    },
+    "OK": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Click",
+        "post_delay": 10000
+    },
+    "预期外错误的OK": {
+        "recognition": "OCR",
+        "expected": "OK",
+        "action": "Click",
+        "post_delay": 10000,
+        "next": "自动进入并开始游戏",
+        "interrupt": "发生预期外的错误_400"
     }
 }
