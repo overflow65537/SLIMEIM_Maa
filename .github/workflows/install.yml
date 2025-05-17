@@ -75,7 +75,8 @@ jobs:
       - name: Install
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          python ./install.py ${{ needs.meta.outputs.tag }}"夏尔智慧助手" "淼九清" "夏尔智慧助手"
+
 
       - name: Download MFAWPF
         if: ${{ matrix.os == 'win' }}
